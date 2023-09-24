@@ -1,0 +1,77 @@
+/* Adjustments for responsiveness and app-like appearance */
+
+/* Set a background color and a minimum height for your app */
+.expense-tracker {
+  background-color: #f2f2f2; /* Add a background color */
+  min-height: 100vh; /* Ensure a minimum height for the app */
+  display: flex;
+  flex-direction: column; /* Change to column to stack elements */
+  align-items: center;
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+/* Style the header */
+.expense-tracker h1 {
+  font-size: 36px; /* Slightly reduce font size */
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  color: #023047;
+}
+
+/* Style the profile section */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Reduce the margin-top for better alignment */
+  text-align: center; /* Center-align text */
+}
+
+.profile-photo {
+  width: 150px; /* Reduce photo size */
+  height: 150px; /* Maintain a square shape */
+  border-radius: 50%;
+  object-fit: cover; /* Ensure the photo fills the circle */
+}
+
+/* Style the sign-out button */
+.sign-out-button {
+  border: none;
+  margin-top: 20px; /* Reduce margin-top for better alignment */
+  width: 200px; /* Increase button width for easier clicking */
+  background: #3498db;
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px; /* Slightly reduce font size */
+  font-weight: bold;
+  padding: 10px 20px; /* Adjust padding for better button size */
+  text-align: center; /* Center-align text */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sign-out-button:hover {
+  background: #3cb0fd;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+
+/* Style the transaction list */
+.transactions {
+  margin-top: 20px; /* Reduce margin-top for better alignment */
+  width: 100%; /* Ensure the list takes the full width */
+  max-width: 600px; /* Set a maximum width for better readability */
+  height: auto; /* Allow the height to adjust based on content */
+  border: 1px solid #ccc; /* Reduce border thickness for a softer look */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  background-color: #fff; /* Set a white background */
+  overflow: auto;
+  padding: 10px; /* Add padding for spacing within the list */
+}
+
+/* Ensure the transaction list is scrollable on smaller screens */
+@media (max-width: 768px) {
+  .transactions {
+    max-height: 300px; /* Limit the height for scrolling */
+  }
+}
